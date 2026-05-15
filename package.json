@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postinstall": "node -e \"try{const fs=require('fs');const p='node_modules/metro-config/src/loadConfig.js';let c=fs.readFileSync(p,'utf8');fs.writeFileSync(p,c.replace(/configs\\.toReversed\\(\\)/g,'[...configs].reverse()').replace(/reversedConfigs\\.toReversed\\(\\)/g,'[...reversedConfigs].reverse()'));console.log('metro-config patched')}catch(e){}\""
   },
   "jest": {
     "preset": "ts-jest",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
+    "babel-preset-expo": "^55.0.21",
     "expo": "~54.0.33",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",

@@ -7,19 +7,17 @@
     "preview": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk"
-      },
-      "env": {
-        "NODE_VERSION": "20.18.0"
+        "buildType": "apk",
+        "image": "latest"
       }
     },
     "production": {
       "android": {
-        "buildType": "app-bundle"
+        "buildType": "app-bundle",
+        "image": "latest"
       },
-      "ios": {},
-      "env": {
-        "NODE_VERSION": "20.18.0"
+      "ios": {
+        "image": "latest"
       }
     }
   },
