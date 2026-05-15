@@ -9,14 +9,18 @@
       "android": {
         "buildType": "apk"
       },
-      "node": "20.18.0"
+      "env": {
+        "NODE_VERSION": "20.18.0"
+      }
     },
     "production": {
       "android": {
         "buildType": "app-bundle"
       },
       "ios": {},
-      "node": "20.18.0"
+      "env": {
+        "NODE_VERSION": "20.18.0"
+      }
     }
   },
   "submit": {
